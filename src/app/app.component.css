@@ -1,0 +1,20 @@
+.r25-container {
+    height: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.r25-title {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+        color: rgba(255,255,255,.87);
+    background-color: #673ab7;
+        font-size: 14px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
