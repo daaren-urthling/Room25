@@ -1,18 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.scss';
-
-.r25-title-bar {
-    background-color: md-color($primary);
-    color: md-color($primary, default-contrast);
+// Import Material Mixins
+@import '~@angular/material/theming';
+// Define a custom mixin that takes in the current theme
+@mixin room25-theme($theme) {
+  // Parse the theme and create variables for each color in the pallete
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $config: mat-typography-config();
+  // Create theme specfic styles
+  .r25-title-bar {
+    background-color: mat-color($primary);
+    color: mat-color($primary, default-contrast);
     text-align: center;
     padding: 10px;
-    font-family: $md-font-family;
-    font-size: $md-body-font-size-base * 1.2;
-}
+    font-family: $mat-font-family;
+    font-size: mat-font-size($config, headline) * 1.8;
+  }
+    
+  .r25-absolute-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
 
-.r25-absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
