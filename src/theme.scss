@@ -2,8 +2,8 @@
 @import './styles.scss';
 
 @include mat-core();
-$candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-green, A200, A100, A400);
+$candy-app-primary: mat-palette($mat-indigo, 400, 300, 500);
+$candy-app-accent:  mat-palette($mat-teal, A200, A100, A400);
 $candy-app-warn:    mat-palette($mat-red);
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 

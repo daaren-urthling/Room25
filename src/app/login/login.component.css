@@ -5,3 +5,26 @@
     height: 100%;
     width:100%;
 }
+
+.login-panel {
+    width:400px;
+}
+
+#login-container .btm-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#login-container #create-account {
+    float: right;
+}
+
+#login-container #forgot-password {
+    float: left;
+}
+
+#login-container #confirm-login {
+    width:80%;
+    margin-left:10%;
+}
+  

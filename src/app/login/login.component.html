@@ -1,7 +1,21 @@
-<div class="login-screen">
+<div id="login-container" class="login-screen">
   <r25-panel class="login-panel r25-absolute-center" title="Gioca a ROOM-25">
+    <form r25-layout="column">
+      <mat-form-field>
+        <input matInput placeholder="Login">
+      </mat-form-field>
+      <mat-form-field>
+          <input type="password" matInput placeholder="Password">
+      </mat-form-field>
       <br>
-      <button type="submit" mat-raised-button>Accedi</button>    
+      <div r25-layout="row">
+        <button id="confirm-login" type="submit" mat-raised-button color="primary">Accedi</button>        
+      </div>
       <br>
+      <div class="btm-links">
+        <a id="forgot-password" routerLink="." color="primary">Password dimenticata?</a>
+        <a id="create-account" routerLink="." color="primary">Registrati</a>
+      </div>
+    </form>
   </r25-panel>
 </div>
