@@ -1,0 +1,30 @@
+<div id="signup-container"  class="signup-screen">
+  <r25-panel class="signup-panel r25-absolute-center" title="Registrati su ROOM-25">
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)" r25-layout="column">
+      <mat-form-field>
+        <input matInput type="email" [pattern]="emailPattern()" name="login" placeholder="E-mail" #login="ngModel" [(ngModel)]="user.login" required>
+        <mat-error *ngIf="!login.valid">L'indirizzo e-mail non è scritto correttamente</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="name" placeholder="Nome" #name="ngModel" [(ngModel)]="user.name">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="Password" required>
+        <mat-error *ngIf="!password.valid">La password è obbligatoria</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput name="pwdRepeat" #pwdRepeat="ngModel" [(ngModel)]="passwordRepeat" placeholder="Ripeti password" required>
+      </mat-form-field>
+      <br>
+    
+      <div r25-layout="row">
+        <button id="confirm-signup" type="submit" mat-raised-button color="primary" [disabled]="!signupForm.valid">Registrati</button>        
+      </div>
+      <br>
+      <div class="btm-links">
+        <a id="forgot-password" routerLink="." color="primary">Password dimenticata?</a>
+        <a id="login" routerLink="/login" color="primary">Entra</a>
+      </div>
+    </form>
+  </r25-panel>  
+</div>

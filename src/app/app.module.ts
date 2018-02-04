@@ -6,14 +6,16 @@ import { MatButtonModule, MatCheckboxModule, MatCardModule, MatFormFieldModule, 
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PanelComponent } from './shared/panel/panel.component';
 import { R25LayoutDirective } from './directives/layout.directive';
+import { SignupComponent } from './login/signup/signup.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     R25LayoutDirective,
     LoginComponent,
-    PanelComponent
+    PanelComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

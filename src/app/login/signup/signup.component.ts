@@ -1,15 +1,16 @@
-import { UserInfo } from './../model/user-info.model';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { NgForm } from '@angular/forms';
+import { UserInfo } from '../../model/user-info.model';
 
 @Component({
-  selector: 'r25-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'r25-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class LoginComponent implements OnInit {
+export class SignupComponent implements OnInit {
 
   user: UserInfo = new UserInfo();
+  passwordRepeat: string = "";
 
   constructor() { }
 
@@ -23,5 +24,5 @@ export class LoginComponent implements OnInit {
   emailPattern() {
     return '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$';
   }
-
+  
 }
