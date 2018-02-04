@@ -6,11 +6,12 @@ import { MatButtonModule, MatCheckboxModule, MatCardModule, MatFormFieldModule, 
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PanelComponent } from './shared/panel/panel.component';
 import { R25LayoutDirective } from './directives/layout.directive';
+import { LoginComponent } from './login/login/login.component';
 import { SignupComponent } from './login/signup/signup.component';
+import { ValueMatches } from './login/signup/value-matches.validator';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
     R25LayoutDirective,
     LoginComponent,
     PanelComponent,
-    SignupComponent
+    SignupComponent,
+    ValueMatches
   ],
   imports: [
     BrowserModule,
