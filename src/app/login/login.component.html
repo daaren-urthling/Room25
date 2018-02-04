@@ -1,15 +1,17 @@
 <div id="login-container" class="login-screen">
   <r25-panel class="login-panel r25-absolute-center" title="Gioca a ROOM-25">
-    <form r25-layout="column">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" r25-layout="column">
       <mat-form-field>
-        <input matInput placeholder="Login">
+        <input matInput type="email" [pattern]="emailPattern()" name="login" placeholder="E-mail" #login="ngModel" [(ngModel)]="user.login" required>
+        <mat-error *ngIf="!login.valid">L'indirizzo e-mail non è scritto correttamente</mat-error>
       </mat-form-field>
       <mat-form-field>
-          <input type="password" matInput placeholder="Password">
+        <input type="password" matInput name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="Password" required>
+        <mat-error *ngIf="!password.valid">La password è obbligatoria</mat-error>
       </mat-form-field>
       <br>
       <div r25-layout="row">
-        <button id="confirm-login" type="submit" mat-raised-button color="primary">Accedi</button>        
+        <button id="confirm-login" type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Accedi</button>        
       </div>
       <br>
       <div class="btm-links">

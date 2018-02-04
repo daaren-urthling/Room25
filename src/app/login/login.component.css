@@ -28,3 +28,6 @@
     margin-left:10%;
 }
   
+mat-form-field {
+    margin-bottom: 12px;
+}
